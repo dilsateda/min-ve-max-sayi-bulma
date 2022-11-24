@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int  n;
+        int number, min=-9999999, max=999999;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print(" kaç tane sayı gireceksin:");
+        n = input.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print("Sayiyi giriniz : ");
+            number = input.nextInt();
+
+            if (i == 1) {
+                min = number;
+                max = number;
+            }
+            if (number < min) {
+                min = number;
+            } else if (number > max) {
+                max = number;
+            }
+        }
+        System.out.println("En büyük sayı: " + max);
+        System.out.println("************");
+        System.out.print("En kücük sayı: " + min);
+}
+    }
